@@ -1,1 +1,11 @@
-<h1>Please fill the form</h1>
+
+<div class="container">
+    <h1>Please fill the form</h1>
+        <%= simple_form_for(@pet) do |f| %>
+            <%= f.input :species,  collection: Pet::SPECIES %>
+            <%= f.input :color %>    
+            <%= f.input :address %> 
+            <%= f.input :found_on %>  
+            <%= f.submit class: "btn btn-primary" %>        
+        <% end %>  
+</div>
